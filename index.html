@@ -1,190 +1,20 @@
-
-<!DOCTYPE html>
-<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#061c32">
-  <title>Deep Blue | An Ocean Escape</title>
-  <link rel="stylesheet" href="style.css">
+   <title>My Website</title>
+   <link rel="stylesheet" href="index.css">
+
+
 </head>
+
+
 <body>
-  <div id="bubbles"></div>
-  <div id="toast"></div>
-
-  <header class="navbar">
-    <a href="#home" class="logo">◈ DEEP<span>BLUE</span></a>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#aquarium">Aquarium</a>
-      <a href="#dive">Dive</a>
-      <a href="#journal">Journal</a>
-    </nav>
-    <div class="nav-actions">
-      <button id="soundBtn" title="Toggle ocean sounds">♫</button>
-      <button id="themeBtn" title="Toggle night mode">☾</button>
-    </div>
-  </header>
-
-  <main>
-    <section id="home" class="hero">
-      <div class="sunlight"></div>
-      <div class="hero-content">
-        <div class="eyebrow">✦ YOUR LITTLE CORNER OF THE OCEAN ✦</div>
-        <h1>Somewhere<br><em>beneath</em> the blue.</h1>
-        <p>Slow down. Drift away. Discover a world where time moves a little differently.</p>
-        <div class="hero-buttons">
-          <a href="#dive" class="btn primary">Begin exploring ↗</a>
-          <a href="#aquarium" class="btn secondary">Visit the aquarium</a>
-        </div>
-        <div class="hero-stats">
-          <div><strong id="speciesStat">0</strong><small>Species discovered</small></div>
-          <div><strong id="treasureStat">0</strong><small>Treasures found</small></div>
-          <div><strong id="depthStat">0m</strong><small>Deepest dive</small></div>
-        </div>
-      </div>
-      <div class="hero-art">
-        <div class="art-ring ring-one"></div>
-        <div class="art-ring ring-two"></div>
-        <span class="hero-fish fish-one">🐠</span>
-        <span class="hero-fish fish-two">🐟</span>
-        <span class="hero-fish fish-three">🪼</span>
-        <span class="hero-fish fish-four">🐡</span>
-        <div class="hero-orb">🌊</div>
-        <div class="art-caption">EST. SOMEWHERE IN THE PACIFIC</div>
-      </div>
-      <a class="scroll-hint" href="#aquarium">SCROLL TO EXPLORE ↓</a>
-    </section>
-
-    <section id="aquarium" class="section">
-      <div class="section-heading">
-        <div>
-          <span class="eyebrow">01 / THE LIVING OCEAN</span>
-          <h2>Meet the <em>locals.</em></h2>
-          <p>Click the creatures to discover them. Your discoveries are saved in your journal.</p>
-        </div>
-        <div class="counter-pill"><span id="aquariumCount">0</span> / 8 DISCOVERED</div>
-      </div>
-
-      <div class="aquarium">
-        <div class="aquarium-light"></div>
-        <div class="aquarium-label">◉ LIVE AQUARIUM FEED <span>● ONLINE</span></div>
-        <div id="aquariumCreatures"></div>
-        <div class="sea-floor">
-          <span>🪸</span><span>🌿</span><span>🪸</span>
-          <span>🌱</span><span>🪨</span><span>🌿</span><span>🪸</span>
-        </div>
-        <div class="aquarium-bottom">BLUE HOLE OBSERVATION DECK — SECTOR 07</div>
-      </div>
-      <div id="creatureInfo" class="creature-info">
-        <span class="info-icon">🔎</span>
-        <div>
-          <strong>Select a sea creature</strong>
-          <p>Every creature has a little story to tell.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="dive" class="section dive-section">
-      <div class="section-heading">
-        <div>
-          <span class="eyebrow">02 / BELOW THE SURFACE</span>
-          <h2>Go a little <em>deeper.</em></h2>
-          <p>Explore the ocean, discover hidden treasure, and see what lies below.</p>
-        </div>
-      </div>
-      <div class="dive-layout">
-        <div class="dive-window" id="diveWindow">
-          <div class="dive-hud">
-            <span>◉ DIVE ACTIVE</span>
-            <span id="zoneLabel">SUNLIT ZONE</span>
-          </div>
-          <div class="dive-depth" id="depthDisplay">000 M</div>
-          <div class="depth-ruler">0m ━━━━━ 200m ━━━━━ 500m ━━━━━ 1000m</div>
-          <div class="dive-visual">
-            <span class="dive-creature" id="diveCreature">🐠</span>
-            <div class="diver">🤿</div>
-            <div class="dive-particles" id="diveParticles"></div>
-          </div>
-          <div class="dive-message" id="diveMessage">The water is warm and clear. A perfect day to explore.</div>
-          <div class="dive-controls">
-            <button id="surfaceBtn">↑ Ascend</button>
-            <button id="descendBtn">↓ Descend</button>
-          </div>
-        </div>
-        <div class="dive-sidebar">
-          <div class="panel">
-            <span class="panel-label">EXPLORATION STATUS</span>
-            <h3>Your dive log</h3>
-            <div class="metric"><span>Current depth</span><strong id="sideDepth">0 m</strong></div>
-            <div class="metric"><span>Ocean zone</span><strong id="sideZone">Sunlit</strong></div>
-            <div class="metric"><span>Treasure collected</span><strong id="sideTreasure">0</strong></div>
-            <div class="progress-track"><div id="depthProgress"></div></div>
-            <small>Progress toward the deep ocean</small>
-          </div>
-          <div class="panel treasure-panel">
-            <div class="treasure-icon">🧰</div>
-            <h3>Hidden treasures</h3>
-            <p>The deeper you explore, the more likely you are to discover something special.</p>
-            <button id="treasureBtn" class="btn primary full">Search this depth ✦</button>
-            <small id="treasureHint">Every search is a new opportunity.</small>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section game-section" id="game">
-      <div class="section-heading">
-        <div>
-          <span class="eyebrow">03 / A LITTLE DISTRACTION</span>
-          <h2>Bubble <em>pop.</em></h2>
-          <p>A tiny, relaxing mini-game. Pop as many bubbles as you can in 30 seconds.</p>
-        </div>
-      </div>
-      <div class="game-card">
-        <div class="game-top">
-          <div><small>SCORE</small><strong id="gameScore">000</strong></div>
-          <div><small>TIME LEFT</small><strong id="gameTime">30s</strong></div>
-          <div><small>BEST</small><strong id="gameBest">000</strong></div>
-        </div>
-        <div id="gameArea" class="game-area">
-          <div class="game-placeholder">
-            <span>🫧</span>
-            <h3>A moment of calm.</h3>
-            <p>Ready to chase some bubbles?</p>
-            <button id="startGameBtn" class="btn primary">Start playing →</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="journal" class="section journal-section">
-      <div class="section-heading">
-        <div>
-          <span class="eyebrow">04 / YOUR OCEAN JOURNAL</span>
-          <h2>Little <em>discoveries.</em></h2>
-          <p>Every ocean explorer needs a journal. Find all eight marine creatures.</p>
-        </div>
-        <button id="resetBtn" class="text-button">Reset progress ↺</button>
-      </div>
-      <div id="journalGrid" class="journal-grid"></div>
-    </section>
-
-    <section class="closing">
-      <div class="closing-orb">✧</div>
-      <span class="eyebrow">UNTIL THE NEXT DIVE</span>
-      <h2>The ocean will<br>always be <em>here.</em></h2>
-      <p>Take your time. There's no rush beneath the waves.</p>
-      <a href="#home" class="btn secondary">Back to the surface ↑</a>
-    </section>
-  </main>
-
-  <footer>
-    <span class="logo">◈ DEEP<span>BLUE</span></span>
-    <span>Made for slow days and ocean dreams.</span>
-    <span>✦ STAY CURIOUS ✦</span>
-  </footer>
-
-  <script src="script.js"></script>
+   Hello World
+   <img src="https://d2zp5xs5cp8zlg.cloudfront.net/image-79322-800.jpg"
+   <script src="index.js"></script>
 </body>
-</html>
+
+
+
+
+
+
+
