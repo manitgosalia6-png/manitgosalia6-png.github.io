@@ -1,4 +1,11 @@
 img {
-   width: 500px;
-   height: 500px;
+   width: 1000px;
+   height: 1000px;
+}
+body {
+  backgroundcolor:dimgray;
+}
+
+h1 {
+  color: blue;
 }
