@@ -1,4 +1,4 @@
-var title = document.getElementById("Ttile")
+var title = document.getElementById("Title")
 
 title.onclick = function() {
   if (title.style.color == "blue"){
