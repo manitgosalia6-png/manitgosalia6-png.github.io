@@ -1,8 +1,31 @@
 square {
-    background-color: red;
+    background: blue;
     width:100px;
     height:100px;
     position: absolute;
     left:50px;
     top:50px;
+    animation: expandAndContract 3s infinite;
 }
+
+@keyframes expandAndContract {
+    0%{
+        width:100px;
+        height:100px;
+        transform:rotate(0deg);
+
+    }
+    50%{
+        width:2000px;
+        height:50px;
+        transform:rotate(0deg);
+    }
+
+    100%{
+        width:150px;
+        height:450px;
+        transform:rotate(180deg);
+
+    }
+}
+
