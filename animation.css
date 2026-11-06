@@ -1,5 +1,8 @@
 square {
-    background-color: rgb(185, 43, 43);
+    background-color: red;
     width:100px;
     height:100px;
+    position: absolute;
+    left:50px;
+    top:50px;
 }
