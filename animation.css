@@ -10,8 +10,11 @@
 
 body {
     background-image: url("https://imgcdn.stablediffusionweb.com/2024/11/16/89d10776-b4d8-4133-a654-e3bdd0492630.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
 }
-
 @keyframes expandAndContract {
     0%{
         width:100px;
