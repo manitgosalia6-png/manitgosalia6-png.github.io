@@ -1,8 +1,13 @@
 img {
+
    width: 1000px;
    height: 1000px;
 }
 body {
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+
   background-color: dimgray;
   background-image: url("https://thumbs.dreamstime.com/b/pixel-art-ocean-landscape-rocky-islands-lush-greenery-under-blue-sky-water-pixel-art-landscape-featuring-calm-ocean-423791540.jpg");
 
