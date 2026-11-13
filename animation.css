@@ -7,6 +7,9 @@
     top:90%;
     scale:0.5;
     animation: expandAndContract 3s infinite;
+    position: fixed;
+    top: 20px;
+    right: 20px;
 }
 
 #pacman {
@@ -19,7 +22,7 @@
     border-top-right-radius: 60px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
-    animation: phasers fire 4s infinite;
+    animation: phasers-fire 4s infinite;
 }
 
 #pointer { width: 200px; height: 40px; position: relative; background: rgb(0, 225, 255); } #pointer:after { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 0; border-left: 20px solid white; border-top: 20px solid transparent; border-bottom: 20px solid transparent; } #pointer:before { content: ""; position: absolute; right: -20px; bottom: 0; width: 0; height: 0; border-left: 20px solid rgb(0, 255, 255); border-top: 20px solid transparent; border-bottom: 20px solid transparent; }
