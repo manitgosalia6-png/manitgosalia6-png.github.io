@@ -8,6 +8,20 @@
     animation: expandAndContract 3s infinite;
 }
 
+#pacman {
+    width: 0px; height: 0px;
+    border-right: 60px solid transparent;
+    border-top: 60px solid yellow;
+    border-left: 60px solid yellow;
+    border-bottom: 60px solid yellow;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+}
+
+#pointer { width: 200px; height: 40px; position: relative; background: rgb(0, 225, 255); } #pointer:after { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 0; border-left: 20px solid white; border-top: 20px solid transparent; border-bottom: 20px solid transparent; } #pointer:before { content: ""; position: absolute; right: -20px; bottom: 0; width: 0; height: 0; border-left: 20px solid rgb(0, 255, 255); border-top: 20px solid transparent; border-bottom: 20px solid transparent; }
+
 body {
     background-image: url("https://imgcdn.stablediffusionweb.com/2024/11/16/89d10776-b4d8-4133-a654-e3bdd0492630.jpg");
     background-repeat: no-repeat;
