@@ -1,0 +1,16 @@
+body {
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+
+  background-color: dimgray;
+  background-image: url("https://t3.ftcdn.net/jpg/20/37/52/10/360_F_2037521028_oGApsvj1YOaokJto5Eyy7gXkVFCE2SZ4.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  min-height: 100vh;
+  margin: 0;
+}
